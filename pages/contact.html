@@ -20,11 +20,13 @@ NAVBAR
 
 <nav class="navbar">
 
-    <div class="logo">
+    <a href="../index.html" class="logo">
 
-        <img src="../images/logo2.png" alt="HARDEN14">
+    <img src="../images/logo2.png" alt="HARDEN14">
 
-    </div>
+</a>
+
+<div class="menu-toggle">&#9776;</div>
 
     <ul>
 
@@ -115,25 +117,35 @@ CONTACT
 
         <h2>ΣΤΕΙΛΤΕ ΜΗΝΥΜΑ</h2>
 
-        <form>
+        <div class="contact-form">
 
-            <input type="text" placeholder="Ονοματεπώνυμο" required>
+    <h2>ΣΤΕΙΛΤΕ ΜΗΝΥΜΑ</h2>
 
-            <input type="email" placeholder="Email" required>
+    <form action="https://formsubmit.co/info@harden14.com" method="POST">
 
-                        <input type="text" placeholder="Τηλέφωνο">
+        <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
 
-            <textarea
-                rows="8"
-                placeholder="Περιγράψτε το έργο σας..."></textarea>
+        <input type="email" name="email" placeholder="Email" required>
 
-            <button type="submit">
+        <input type="text" name="phone" placeholder="Τηλέφωνο">
 
-                ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ
+        <textarea
+            name="message"
+            rows="8"
+            placeholder="Περιγράψτε το έργο σας..."
+            required></textarea>
 
-            </button>
+        <input type="hidden" name="_subject" value="Νέο μήνυμα από το HARDEN14">
 
-        </form>
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit" class="btn">
+            ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ
+        </button>
+
+    </form>
+
+</div>
 
     </div>
 
@@ -160,17 +172,18 @@ FOOTER
 
             <ul>
 
-        <li><a href="../index.html">Αρχική</a></li>
+                <a href="../index.html">HOME</a>
 
-        <li><a href="erga.html">Έργα</a></li>
+                <li><a href="erga.html">PROJECTS</a></li>
 
-        <li><a href="ypiresies.html">Υπηρεσίες</a></li>
+                <li><a href="ypiresies.html">SERVICES</a></li>
 
-        <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
 
-        <li><a href="contact.html" class="active">Επικοινωνία</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
 
-    </ul>
+            </ul>
+
         </div>
 
         <div class="footer-contact">

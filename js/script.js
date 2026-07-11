@@ -30,6 +30,10 @@ if(menuToggle && navMenu){
 
         navMenu.classList.toggle("show");
 
+        document.body.classList.toggle("menu-open");
+
+        menuToggle.innerHTML = navMenu.classList.contains("show") ? "&times;" : "&#9776;";
+
     });
 
     document.querySelectorAll(".navbar a").forEach(link=>{
@@ -37,6 +41,10 @@ if(menuToggle && navMenu){
         link.addEventListener("click",()=>{
 
             navMenu.classList.remove("show");
+
+            document.body.classList.remove("menu-open");
+
+            menuToggle.innerHTML="&#9776;";
 
         });
 
