@@ -215,5 +215,31 @@ if(currentYear){
 }
 
 /*==================================================
+ADVENTURE CARD
+==================================================*/
+
+const adventureCard = document.querySelector(".adventure-card");
+const adventureServiceCard = document.querySelector(".adventure-service-card");
+
+if (adventureCard) {
+
+    adventureCard.addEventListener("click", () => {
+
+        window.location.href = "pages/adventure.html";
+
+    });
+
+}
+if (adventureServiceCard) {
+
+    adventureServiceCard.addEventListener("click", () => {
+
+        window.location.href = "adventure.html";
+
+    });
+
+}
+
+/*==================================================
 END OF FILE
 ==================================================*/
