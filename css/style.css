@@ -161,6 +161,9 @@ url("../images/navbar-metal.jpg") center center / cover no-repeat;
 }
 
 .navbar a{
+    position: relative;
+    
+    display: inline-block;
 
     color:#f2f2f2;
 
@@ -176,6 +179,30 @@ url("../images/navbar-metal.jpg") center center / cover no-repeat;
 .navbar a.active{
 
     color:#fd5000;
+
+}
+.navbar a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0;
+    height:2px;
+
+    background:#fd5000;
+
+    transition:width .3s ease;
+
+}
+
+.navbar a:hover::after,
+.navbar a.active::after{
+
+    width:100%;
 
 }
 
@@ -407,17 +434,15 @@ GALLERY
 
 .gallery{
 
-    max-width:1200px;
+    max-width:1400px;
 
     margin:0 auto 100px;
 
     padding:0 70px;
 
-    display:grid;
+    column-count:3;
 
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
+    column-gap:30px;
 
 }
 
@@ -429,18 +454,18 @@ GALLERY
 
     overflow:hidden;
 
+    break-inside:avoid;
+
+    margin-bottom:30px;
+
     transition:.35s ease;
 
 }
 
 .card img{
-
     width:100%;
-
-    height:300px;
-
-    object-fit:cover;
-
+    height:auto;
+    display:block;
     transition:.35s ease;
 
 }
@@ -1913,5 +1938,101 @@ ADVENTURE PANELS
         height:240px;
 
     }
+
+}
+
+.project-card{
+    background:#1a1a1a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    .project-card{
+    min-height:0;
+    aspect-ratio:1/1;
+    padding:30px;
+}
+    transition:.35s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-card-content span{
+    color:#fd5000;
+    font-size:.8rem;
+    letter-spacing:3px;
+}
+
+.project-card-content h3{
+    margin:15px 0;
+    font-size:2rem;
+    color:#fff;
+}
+
+.project-card-content p{
+    color:#bdbdbd;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+/*==================================================
+PROJECT NAVIGATION
+==================================================*/
+
+.project-navigation{
+
+    max-width:1200px;
+    margin:0 auto 100px;
+    padding:0 30px;
+
+    text-align:center;
+
+}
+
+.project-navigation h2{
+
+    color:#fff;
+    font-size:2rem;
+    letter-spacing:1px;
+    margin-bottom:18px;
+
+}
+
+.project-navigation p{
+
+    max-width:700px;
+    margin:0 auto 45px;
+    color:#bdbdbd;
+    line-height:1.8;
+
+}
+
+.project-links{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:22px;
+
+}
+
+.project-navigation .btn{
+
+    width:100%;
+    margin-top:0;
+    text-align:center;
+
+}
+
+.project-links{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    max-width:1200px;
+    margin:0 auto;
 
 }
