@@ -2036,3 +2036,13 @@ PROJECT NAVIGATION
     margin:0 auto;
 
 }
+
+@media (max-width:768px){
+
+    .project-links{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
