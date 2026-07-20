@@ -461,18 +461,6 @@ GALLERY
 
 }
 
-@media (max-width:768px){
-
-    .gallery{
-
-        column-count:1;
-        padding:0 20px;
-        column-gap:20px;
-
-    }
-
-}
-
 .card{
 
     background:#1b1b1b;
@@ -1864,6 +1852,31 @@ max-width:900px;
         font-size:1.9rem;
         line-height:1.2;
 
+    }
+
+    .our-story{
+        padding:55px 22px;
+    }
+
+    .story-images{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .our-story h2{
+        font-size:1.65rem;
+        margin-bottom:35px;
+    }
+
+    .our-story blockquote{
+        font-size:1.12rem;
+        line-height:1.8;
+        margin-bottom:35px;
+    }
+
+    .our-story p{
+        font-size:1rem;
+        line-height:1.9;
     }
 
 }
