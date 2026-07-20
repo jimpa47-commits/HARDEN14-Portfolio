@@ -17,9 +17,10 @@ const animatedElements = document.querySelectorAll(
 );
 
 const galleryImages = document.querySelectorAll(
-    ".gallery img, .portfolio-card img"
-);
 
+    ".gallery img, .portfolio-card img, .story-images img"
+
+);
 /*==================================================
 MOBILE MENU
 ==================================================*/
@@ -88,15 +89,17 @@ let lightbox;
 
 function closeLightbox(){
 
-    if(lightbox){
+    if(!lightbox) return;
+
+    lightbox.classList.remove("active");
+
+    setTimeout(()=>{
 
         lightbox.remove();
-
         lightbox = null;
-
         document.body.style.overflow="";
 
-    }
+    },300);
 
 }
 
@@ -126,21 +129,11 @@ function openLightbox(src,alt){
 
     document.body.style.overflow="hidden";
 
-    lightbox.addEventListener("click",e=>{
+    lightbox.addEventListener("click", () => {
 
-        if(
+    closeLightbox();
 
-            e.target.classList.contains("lightbox") ||
-
-            e.target.classList.contains("lightbox-close")
-
-        ){
-
-            closeLightbox();
-
-        }
-
-    });
+});
 
 }
 
@@ -165,6 +158,7 @@ document.addEventListener("keydown",e=>{
     }
 
 });
+
 
 /*==================================================
 BACK TO TOP
