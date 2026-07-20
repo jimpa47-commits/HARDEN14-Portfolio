@@ -461,6 +461,18 @@ GALLERY
 
 }
 
+@media (max-width:768px){
+
+    .gallery{
+
+        column-count:1;
+        padding:0 20px;
+        column-gap:20px;
+
+    }
+
+}
+
 .card{
 
     background:#1b1b1b;
