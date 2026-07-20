@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Επικοινωνία | HARDEN14</title>
+<title>Contact | HARDEN14</title>
 
 <link rel="stylesheet" href="../css/style.css">
 
@@ -116,35 +116,48 @@ CONTACT
 
     <div class="contact-form">
 
-        <h2>ΣΤΕΙΛΤΕ ΜΗΝΥΜΑ</h2>
-
-        <div class="contact-form">
-
-    <h2>ΣΤΕΙΛΤΕ ΜΗΝΥΜΑ</h2>
-
-    <form action="https://formsubmit.co/jimpa47@gmail.com" method="POST">
+       <h2>ΑΣ ΜΙΛΗΣΟΥΜΕ</h2>
 
         <form action="https://formsubmit.co/info@harden14.com" method="POST">
 
-    <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
+    <input
+    type="text"
+    name="name"
+    placeholder="Ονοματεπώνυμο"
+    autocomplete="name"
+    spellcheck="false"
+    required>
 
-    <input type="email" name="email" placeholder="Email" required>
+    <input
+    type="email"
+    name="email"
+    placeholder="Email"
+    autocomplete="email"
+    inputmode="email"
+    required>
 
-    <input type="text" name="phone" placeholder="Τηλέφωνο">
+    <input
+    type="tel"
+    name="phone"
+    placeholder="Τηλέφωνο"
+    autocomplete="tel"
+    inputmode="tel">
 
     <textarea
-        name="message"
+    name="message"
+    autocomplete="off"
+    spellcheck="true"
         rows="8"
-        placeholder="Περιγράψτε το έργο σας..."
+        placeholder="Πείτε μας λίγα λόγια για την ιδέα ή το project σας..."
         required></textarea>
 
-    <input type="hidden" name="_subject" value="Νέο μήνυμα από το HARDEN14">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
-
+    <input type="hidden" name="_subject" value="HARDEN14 | Νέα Επικοινωνία από τη φόρμα">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_next" value="https://harden14.com/pages/contact.html?success=1">
+<input type="hidden" name="_autoresponse" value="Ευχαριστούμε για το μήνυμά σας. Το λάβαμε και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό.">
     <button type="submit" class="btn">
-        ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ
-    </button>
+    ΑΠΟΣΤΟΛΗ →
+</button>
 
 </form>
 
@@ -173,7 +186,6 @@ FOOTER
 
             <h3>ΠΛΟΗΓΗΣΗ</h3>
 
-            <ul>
 
 <ul>
     <li><a href="../index.html">HOME</a></li>
@@ -184,8 +196,6 @@ FOOTER
     <li><a href="contact.html">CONTACT</a></li>
 </ul>
 
-            </ul>
-
         </div>
 
         <div class="footer-contact">
@@ -194,9 +204,9 @@ FOOTER
 
             <p>Αθήνα, Ελλάδα</p>
 
-            <p>info@harden14.com</p>
+            <p><a href="mailto:info@harden14.com">info@harden14.com</a></p>
 
-            <p>+30 6943 674737</p>
+            <p><a href="tel:+306943674737">+30 6943 674737</a></p>
 
         </div>
 
@@ -204,7 +214,7 @@ FOOTER
 
     <div class="footer-bottom">
 
-        <p>© 2026 HARDEN14 | Crafted to Last</p>
+        <p>© <span class="current-year"></span> HARDEN14 | Crafted to Last</p>
 
     </div>
 
