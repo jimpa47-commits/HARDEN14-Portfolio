@@ -996,11 +996,11 @@ RESPONSIVE
 
     .gallery{
 
-        grid-template-columns:repeat(2,1fr);
+    column-count:2;
 
-        padding:0 40px;
+    padding:0 40px;
 
-    }
+}
 
     .services{
 
@@ -1136,11 +1136,11 @@ RESPONSIVE
 
     .gallery{
 
-        grid-template-columns:1fr;
+    column-count:1;
 
-        padding:0 25px;
+    padding:0 25px;
 
-    }
+}
 
     .services{
 
@@ -2185,6 +2185,8 @@ border-radius:18px;
     font-style:italic;
 
 }
+
+
 
 /*==================================================
 FROM THE ROAD - RESPONSIVE
